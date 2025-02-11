@@ -17,3 +17,20 @@ header, footer {
 ul {
     list-style-type: square;
 }
+
+ul li:nth-child(odd) {
+    background-color: bisque;
+}
+
+nav a {
+    list-style-type: none;
+    text-decoration: none;
+    color: aliceblue;
+    background-color: blue;
+    border: 1px solid blue;
+    padding: 8px 12px;
+}
+
+nav a:hover, nav a:focus { 
+    background-color: blueviolet;
+}
