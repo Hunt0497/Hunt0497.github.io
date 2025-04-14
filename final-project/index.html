@@ -5,189 +5,197 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
   <title>FinalProject0497</title>
-  <!-- The Page Head above: Sets up page metadata, external stylesheets, and font-awesome for icons -->
+  <!-- The Page Head above: Sets up page metadata, external stylesheets, google font and font-awesome for icons -->
 </head>
-<body id="home">
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <a href="/final-project/index.html">
-          <img src="images/logo.png" alt="Three Star Media Logo">
-        </a>
-        <!-- The Logo above linking back to homepage for easy site navigation -->
-      </div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about-us">About Us</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#team">Team</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="search-container">
-        <form action="#" method="get">
-          <input type="search" id="site-search" name="search" placeholder="search">
-          <button type="submit" aria-label="Search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
-        </form>
-        <!-- The Search form above allowing users to search site content; icon is added with Font Awesome -->
-      </div>
-    </nav>
-    <div class="hero-banner">
-      <div class="hero-banner-overlay">
-        <h1>Welcome to Three Star Media</h1>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis repellat hic voluptate sunt nisi incidunt nihil repellendus dolore vitae atque architecto provident quaerat, qui nulla sed quas non fuga natus!</p>
-        <a href="#" class="connect-button">Connect with us <i class="fa-solid fa-caret-right hero-arrow"></i></a>
-      </div>
-      <!-- The Hero Banner above: Introduces the brand with a heading, description, and a call-to-action button. The overlay provides contrast over the background image. -->
-    </div>
-  </header>
-  <main>
-    <section class="about-us" id="about-us">
-      <div class="about-container">
-        <div class="about-us-image">
-          <img src="images/about-us.jpg" alt="Office image with ping pong table">
-        </div>
-        <div class="about-us-content">
-          <h2>About Us</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt odit facere inventore nemo accusantium, rerum nesciunt, explicabo nobis cupiditate laboriosam ex voluptates sapiente? Error incidunt sequi nemo rerum cumque. Delectus!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non laborum mollitia obcaecati eligendi harum quo quidem tempore. Minus explicabo commodi ipsum dolorum, iste odit hic voluptas quasi officia sequi neque.</p>
-        </div>
-      </div>
-      <!-- The About Us Section above: Displays company info beside an image using a side-by-side layout. Useful for introducing the brand visually and descriptively. -->
-    </section>
-    <section class="services" id="services">
-      <h2>Our Services</h2>
-      <div class="services-grid">
-        <article class="service-card">
-          <img src="images/digital.jpg" alt="Person using a phone and laptop">
-          <div class="service-content">
-            <h3>Digital Transformation</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, ex. Tempore error assumenda architecto veniam vitae numquam in vel consequatur, possimus quos. Accusantium error dolor laudantium quidem itaque ullam velit?</p>
-            <a href="#" class="service-button">Digital Plans <i class="fa-solid fa-caret-right"></i></a>
+  <body id="home">
+  <!-- The Header section: Contains the site logo, navigation menu, and search form. Uses Flexbox to align the logo, nav links, and search horizontally on desktop, and stacks them vertically on mobile. -->
+    <header class="header">
+      <div class="header-row container-1200px">
+        <div class="logo-bar">
+          <div class="logo">
+            <img src="images/logo.png" alt="Three Star Logo">
           </div>
-        </article>
-        <article class="service-card">
-          <img src="images/marketing.jpg" alt="Marketing analytics dashboard on a laptop">
-          <div class="service-content">
-            <h3>Marketing</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, ex. Tempore error assumenda architecto veniam vitae numquam in vel consequatur, possimus quos. Accusantium error dolor laudantium quidem itaque ullam velit?</p>
-            <a href="#" class="service-button">Marketing Plans <i class="fa-solid fa-caret-right"></i></a>
-          </div>
-        </article>
-        <article class="service-card">
-          <img src="images/video.jpg" alt="Person holding a phone with video">
-          <div class="service-content">
-            <h3>Video Production</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, ex. Tempore error assumenda architecto veniam vitae numquam in vel consequatur, possimus quos. Accusantium error dolor laudantium quidem itaque ullam velit?</p>
-            <a href="#" class="service-button">Video Plans <i class="fa-solid fa-caret-right"></i></a>
-          </div>
-        </article>
-        <article class="service-card">
-          <img src="images/web.jpg" alt="Notebook with a mobile phone and pen">
-          <div class="service-content">
-            <h3>Web Development</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, ex. Tempore error assumenda architecto veniam vitae numquam in vel consequatur, possimus quos. Accusantium error dolor laudantium quidem itaque ullam velit?</p>
-            <a href="#" class="service-button">Web Plans <i class="fa-solid fa-caret-right"></i></a>
-          </div>
-        </article>
-        <article class="service-card">
-          <img src="images/print.jpg" alt="Newspaper stands on the sidewalk">
-          <div class="service-content">
-            <h3>Print</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, ex. Tempore error assumenda architecto veniam vitae numquam in vel consequatur, possimus quos. Accusantium error dolor laudantium quidem itaque ullam velit?</p>
-            <a href="#" class="service-button">Print Plans <i class="fa-solid fa-caret-right"></i></a>
-          </div>
-        </article>
-      </div>
-      <!-- The Services Section above: Each service card is an article inside a grid. The grid is a 6-column layout where the top two cards will span 3 columns each and the bottom three span 2 columns. -->
-    </section>
-    <section class="our-vision">
-      <div class="vision-content">
-        <h2>Our Vision</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex voluptatem deleniti iure, sit, accusantium rerum est commodi veniam tempora perspiciatis nobis officiis fugiat eaque. Veritatis exercitationem delectus ex ab laudantium.</p>
-        <a href="#" class="vision-button">Learn More <i class="fa-solid fa-caret-right"></i></a>
-      </div>
-      <!-- The Our Vision Section above: A full-width banner with a background image and overlay text. -->
-    </section>
-    <section class="our-team" id="team">
-      <h2>Our Team</h2>
-      <div class="team-grid">
-        <div class="team-member">
-          <img src="images/john.jpg" alt="John Doe - CEO">
         </div>
-        <div class="team-info">
-          <h3>John Doe</h3>
-          <h4>CEO and Co-owner</h4>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, aspernatur ratione sed cum ad officiis sint cumque fugiat similique. Earum laudantium deleniti possimus? Voluptatem architecto repellendus harum sit voluptatum tempora.</p>
-        </div>
-        <div class="team-member">
-          <img src="images/bob.jpg" alt="Bob Rite - CFO">
-        </div>
-        <div class="team-info">
-          <h3>Bob Rite</h3>
-          <h4>CFO and Co-owner</h4>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, aspernatur ratione sed cum ad officiis sint cumque fugiat similique. Earum laudantium deleniti possimus? Voluptatem architecto repellendus harum sit voluptatum tempora.</p>
-        </div>
-      </div>
-      <!-- The Our Team Section above: Displays team members in a 2-column grid — photo and info alternate. -->
-    </section>
-    <section class="contact-us" id="contact">
-      <h2>Contact Us</h2>
-      <div class="contact-grid">
-        <div class="contact-form">
-          <h3>Send us a message</h3>
+      <nav class="nav-links">
+        <ul>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about-us">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+        <div class="search-container">
           <form action="#" method="get">
-            <div class="form-group">
-              <label for="full-name">Full Name</label>
-              <input type="text" id="full-name" name="full-name" required>
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="6" required></textarea>
-            </div>
-            <button type="submit" class="submit-button">Send</button>
+            <input type="search" id="site-search" name="search" placeholder="Search">
+            <button type="submit" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
           </form>
         </div>
-        <div class="contact-map">
-          <h3>Location</h3>
-          <iframe src="https://www.google.com/maps?q=Algonquin+College,+1385+Woodroffe+Ave,+Nepean,+ON&output=embed" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" title="Google Map of Algonquin College"></iframe>
+      </div>
+    </header>
+<!-- The hero banner section below: Placed outside the header so it can stretch full width and be styled separately as the homepage introduction. -->
+    <div class="hero-banner">
+      <div class="hero-overlay">
+        <div class="hero-overlay-content-wrapper container-1200px">
+          <div class="hero-h1"><h1>Welcome to Three Star Media</h1></div>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis repellat hic voluptate sunt nisi incidunt nihil repellendus dolore vitae atque architecto provident quaerat, qui nulla sed quas non fuga natus!</p>
+          <a href="#contact" class="hero-button">Connect with us <i class="fa-solid fa-caret-right hero-arrow"></i></a>
         </div>
       </div>
-      <!-- The Contact Us Section above: Includes a user form for feedback/inquiries and a Google Map embed for location reference. -->
-    </section>
-    <section class="hours">
-      <h2>Hours of operation</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Days</th>
-            <th>Hours</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Monday - Friday</td>
-            <td>9 AM - 6 PM</td>
-          </tr>
-          <tr>
-            <td>Saturday - Sunday</td>
-            <td>Closed</td>
-          </tr>
-        </tbody>
-      </table>
-      <!-- The Hours of Operation above: A basic table showing business availability that will be styled in css. -->
-    </section>
+    </div>
+    <main>
+<!-- About Us section: Uses a two-column layout on desktop with the image on the left and text on the right. On smaller screens, the layout stacks vertically. The image is styled to stay framed within a fixed height, and cropping responsively as the window resizes. -->
+      <section class="about-us" id="about-us">
+        <div class="about-container container-1200px">
+          <div class="about-us-image">
+            <img src="images/about-us.jpg" alt="Office image with ping pong table">
+          </div>
+          <div class="about-us-content">
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt odit facere inventore nemo accusantium, rerum nesciunt, explicabo nobis cupiditate laboriosam ex voluptates sapiente? Error incidunt sequi nemo rerum cumque. Delectus!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non laborum mollitia obcaecati eligendi harum quo quidem tempore. Minus explicabo commodi ipsum dolorum, iste odit hic voluptas quasi officia sequi neque.</p>
+          </div>
+        </div>
+      </section>
+<!-- The Services Section below: Each service card is an article inside a grid. The grid is a 6-column layout where the top two cards will span 3 columns each and the bottom three span 2 columns. -->
+      <section class="services" id="services">
+        <div class="services-h2-container container-1200px"><h2>Our Services</h2></div>
+          <div class="services-grid container-1200px">
+            <article class="service-card">
+              <img src="images/digital.jpg" alt="Person using a phone and laptop">
+              <div class="service-content">
+                <h3>Digital Transformation</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, ex. Tempore error assumenda architecto veniam vitae numquam in vel consequatur, possimus quos. Accusantium error dolor laudantium quidem itaque ullam velit?</p>
+                <a href="#" class="service-button">Digital Plans <i class="fa-solid fa-caret-right"></i></a>
+              </div>
+            </article>
+            <article class="service-card">
+              <img src="images/marketing.jpg" alt="Marketing analytics dashboard on a laptop">
+              <div class="service-content">
+                <h3>Marketing</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, ex. Tempore error assumenda architecto veniam vitae numquam in vel consequatur, possimus quos. Accusantium error dolor laudantium quidem itaque ullam velit?</p>
+                <a href="#" class="service-button">Marketing Plans <i class="fa-solid fa-caret-right"></i></a>
+              </div>
+            </article>
+            <article class="service-card">
+              <img src="images/video.jpg" alt="Person holding a phone with video">
+              <div class="service-content">
+                <h3>Video Production</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, ex. Tempore error assumenda architecto veniam vitae numquam in vel consequatur, possimus quos. Accusantium error dolor laudantium quidem itaque ullam velit?</p>
+                <a href="#" class="service-button">Video Plans <i class="fa-solid fa-caret-right"></i></a>
+              </div>
+            </article>
+            <article class="service-card">
+              <img src="images/web.jpg" alt="Notebook with a mobile phone and pen">
+              <div class="service-content">
+                <h3>Web Development</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, ex. Tempore error assumenda architecto veniam vitae numquam in vel consequatur, possimus quos. Accusantium error dolor laudantium quidem itaque ullam velit?</p>
+                <a href="#" class="service-button">Web Plans <i class="fa-solid fa-caret-right"></i></a>
+              </div>
+            </article>
+            <article class="service-card">
+              <img src="images/print.jpg" alt="Newspaper stands on the sidewalk">
+              <div class="service-content">
+                <h3>Print</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, ex. Tempore error assumenda architecto veniam vitae numquam in vel consequatur, possimus quos. Accusantium error dolor laudantium quidem itaque ullam velit?</p>
+                <a href="#" class="service-button">Print Plans <i class="fa-solid fa-caret-right"></i></a>
+              </div>
+            </article>
+          </div>
+      </section>
+<!-- The Our Vision Section below: A full-width banner with a background image and overlay text. -->
+      <section class="our-vision">
+        <div class="vision-content container-1200px">
+          <h2>Our Vision</h2>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex voluptatem deleniti iure, sit, accusantium rerum est commodi veniam tempora perspiciatis nobis officiis fugiat eaque. Veritatis exercitationem delectus ex ab laudantium.</p>
+          <a href="#" class="vision-button">Learn More <i class="fa-solid fa-caret-right"></i></a>
+        </div>
+      </section>
+<!-- The Our Team section below: Displays team members using a stacked layout on mobile and a side-by-side Flexbox layout on desktop. John’s image appears on the left, Bob’s on the right, with text content aligned. -->
+      <section class="our-team" id="team"> 
+        <div class="team-container container-1200px">
+          <h2>Our Team</h2>
+          <div class="team-member-john">
+            <img src="images/john.jpg" alt="John Doe - CEO">
+            <div class="team-details">
+              <h3>John Doe</h3>
+              <h4>CEO and Co-owner</h4>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa corporis voluptatibus ex quibusdam, cum qui alias nobis illo! Eius, voluptatum nesciunt! Dignissimos, nihil ipsum commodi totam distinctio velit reprehenderit asperiores?</p>
+            </div>
+          </div>
+          <div class="team-member-bob">
+            <img src="images/bob.jpg" alt="Bob Rite -CFO">
+            <div class="team-details">
+              <h3>Bob Rite</h3>
+              <h4>Director of Marketing</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione reprehenderit unde neque perspiciatis! Nobis aliquam perferendis possimus dolorem explicabo architecto eum et deleniti, reiciendis error incidunt repudiandae neque magni atque!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+<!-- Contact section: Includes a form, hours table, and embedded Google Map. Uses CSS Grid layout on desktop. -->
+      <section class="contact-us container-1200px" id="contact">
+        <!-- Column 1: Contact Form -->
+        <h2>Contact Us</h2>
+        <div class="contact-grid">
+          <div class="contact-form">
+            <h3>Send us a message</h3>
+            <form action="#" method="get">
+              <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="full-name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+              </div>
+              <button type="submit" class="submit-button">Send</button>
+            </form>
+          </div>
+          <!-- Column 2: Hours -->
+          <div class="contact-hours">
+            <h3>Hours of operation</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Days</th>
+                  <th>Hours</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Monday - Friday</td>
+                  <td>9 AM - 6 PM</td>
+                </tr>
+                <tr>
+                  <td>Saturday - Sunday</td>
+                  <td>Closed</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- Column 3: Map -->
+          <div class="contact-map">
+            <h3>Location</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44863.20576418932!2d-75.82444643388065!3d45.3498143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce0718cc4a6ad7%3A0xc6cc467725843e2b!2sAlgonquin%20College%20-%20Ottawa%20Campus!5e0!3m2!1sen!2sca!4v1744515985300!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </section>
   </main>
+<!-- The Footer below: Contains copyright info and link source for images used. -->
   <footer>
-    <p>&copy; Copyright Three Star Media, 2020</p>
-    <p>All images are taken from <a href="https://unsplash.com" target="_blank">Unsplash</a></p>
+    <div class="footer-content-wrapper container-1200px">
+      <p>&copy; Copyright Three Star Media, 2020</p>
+      <p>All images are taken from <a href="https://unsplash.com" target="_blank">Unsplash</a></p>
+    </div>
   </footer>
-  <!-- The Footer above: Contains copyright info and link source for images used. -->
 </body>
 </html>

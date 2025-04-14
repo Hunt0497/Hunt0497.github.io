@@ -1,0 +1,640 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.5;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html {
+	box-sizing: border-box;
+}
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+/* END OF RESET */
+/* ============================================= */
+/* ============== GLOBAL RESETS ================ */
+/* ============================================= */
+
+/* Place your reset at the very top (lines 1–49, as you mentioned).
+   Below is the main CSS starting from line 50. */
+
+/* ============================================= */
+/* =============== GLOBAL STYLES =============== */
+/* ============================================= */
+
+/* 
+Already loading 'Open Sans' in your HTML <head>, 
+so no need to @import here again.
+*/
+
+
+
+
+
+/* ========== HEADER SECTION ========== */
+/* This styles the main header including the logo bar, navigation menu, and search form.
+   I also used Flexbox to stack on mobile and lay out horizontally on desktop. */
+
+.header {
+	background-color: #222;
+	width: 100%  
+}
+.logo-bar {
+	background-color: #c78c06;
+	padding: 1rem 0 0.5rem 0;
+}
+.header-row {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 1rem;
+}
+.nav-links {
+	text-align: center;
+}
+.nav-links ul {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.nav-links li {
+	width: 100%;
+}
+.nav-links a {
+	display: block;
+	color: #c78c06;          
+	text-decoration: none;
+	padding: 0.75rem 1.5rem;
+	white-space: nowrap;
+}
+.nav-links a:hover {
+	background-color: #c78c06;
+	color: #222;
+}
+.nav-links a.active {
+	background-color: #c78c06;
+	color: #222;
+}
+.search-container {
+	width: 100%;
+	max-width: 760px;
+	margin: 0 auto;
+	display: flex;
+}
+.search-container form {
+	display: flex;
+	width: 100%;
+}
+.search-container input[type="search"] {
+	flex: 1;       
+	padding: 0.5rem; 
+}
+.search-container button {
+	background-color: transparent;
+	color: #c78c06;               
+	border: 1px solid #c78c06;         
+	padding: 0.5rem 0.5rem;     
+	cursor: pointer;
+	font-size: 1rem;
+}
+
+/* ========== HERO BANNER SECTION ========== */
+/* This is a full-width background image section with a dark overlay containing headline and CTA.
+   I used Flexbox to vertically center overlay content. */
+
+.hero-banner {
+	position: relative;
+	width: 100%;
+	min-height: 50vh;
+	background: url('../images/main-banner.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	display: flex;               
+	align-items: center;        
+	justify-content: flex-start; 
+}
+.hero-overlay {
+	background: rgba(0, 0, 0, 0.6);
+	color: #fff;
+	padding: 1rem;
+}
+.hero-overlay h1 {
+	margin-bottom: 1rem;
+	font-size: 3rem;
+	font-weight: 700;
+}
+.hero-overlay a {
+	display: inline-flex;
+	align-items: center;
+	background-color: #c78c06;
+	color: #222;          
+	text-decoration: none;
+	padding: 1.2rem 1.5rem;
+	font-weight: 400;
+	margin-top: 1rem;
+}
+.hero-button {
+	display: inline-flex;
+	background-color: #c78c06;
+	color: #222;
+	text-decoration: none;
+	padding: 1rem 1.5rem;
+	font-weight: 600;
+}
+.hero-button:hover {
+	background-color: #222;
+	color: #c78c06;
+}
+.hero-button i {
+	font-size: 1.5rem;
+	margin-left: 0.5rem;
+}
+
+/* ========== ABOUT US SECTION ========== */
+/* This is a two-column layout with image and text. Image uses object-fit to stay framed and responsive.
+   Stacks on mobile, side-by-side on desktop. */
+
+.about-us {
+	background-color: #ffe6ac;
+	padding: 1rem 1rem 2rem 1rem;
+}
+.about-container {
+	display: flex;
+	flex-direction: column;
+}
+.about-us-image {
+	width: 100%;
+	height: 100%;
+	height: 300px;
+	overflow: hidden;
+}
+.about-us-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	display: block;
+}
+.about-us-content h2 {
+	font-size: 2.4rem;
+	font-weight: 700;
+	padding: 1rem 0 0.8rem 0;
+}
+
+/* ========== SERVICES SECTION ========== */
+/* This uses CSS Grid to layout service cards. On desktop: 6-column layout with varying column spans.
+   Buttons are aligned at the bottom using Flexbox. */
+
+.services h2 {
+	font-size: 2.4rem;
+	font-weight: 700;
+	padding: 2rem 0 0 1rem;
+}
+.services-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1rem;
+	padding-inline: 1rem;
+	padding-bottom: 2rem;
+	max-width: 1200px;
+	margin: 1rem auto 0 auto;
+}
+.service-card {
+	background-color: #ffe6ac;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+.service-card img {
+	width: 100%;
+}
+.service-content {
+	padding: 1rem;
+}
+.service-content h3 {
+	font-size: 1.6rem;
+	font-weight: 700;
+}
+.service-button {
+	display: inline-flex;
+	margin-top: 1rem;
+	color:white;
+	background-color: #222;
+	text-decoration: none;
+	font-weight: 600;
+	padding: 1.4rem 1.5rem;
+}
+.service-button:hover {
+	background-color: #c78c06;
+	color:#222
+}
+.service-button i {
+	font-size: 1.5rem;
+	margin-left: 0.5rem;
+}
+
+/* ========== OUR VISION SECTION ========== */
+/* Full-width banner with background image and white text overlay.
+   Includes a call-to-action button styled with hover effects. */
+
+.our-vision {
+	background: url(../images/vision.jpg) center/cover no-repeat; 
+	padding: 1rem;
+	color: white;
+}
+
+.our-vision h2 {
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+.vision-button {
+	display: inline-flex;
+	margin-top: 1rem;
+	background-color: #222;
+	color: white;
+	padding: 1.4rem 1.5rem;
+	text-decoration: none;
+	border: #c78c06 solid 0.1rem;
+}
+.vision-button i {
+	font-size: 1.5rem;
+	margin-left: 0.5rem;
+}
+.vision-button:hover {
+	background-color: #c78c06;
+	color:#222
+}
+
+/* ========== OUR TEAM SECTION ========== */
+/* Flex layout showing team members.
+   On desktop: The image alternates and text side-by-side using row and row-reverse. */
+
+.our-team h2 {
+	font-size: 2.4rem;
+	font-weight: 700;
+}
+
+.team-container {
+	padding: 2rem 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+.team-member-bob,
+.team-member-john {
+	background-color: #ffe6ac;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+.team-member img {
+	width: 100%;
+	display: block;
+}
+.team-details {
+	padding: 1rem;
+}
+.team-details h3 {
+	margin-top: 0;
+	font-size: 1.6rem;
+	font-weight: 700;
+}
+.team-details h4 {
+	margin: 0 0 1rem 0;
+	border-bottom: #c78c06 solid 0.2rem; 
+	font-weight: 700; 
+}
+.team-details p {
+	padding-bottom: 1rem;
+}
+
+/* ========== CONTACT SECTION ========== */
+/* Grid layout includes form, map, and business hours.
+   Responsive: stacks on mobile, side-by-side on desktop. */
+
+.contact-us h2 {
+	font-size: 2.4rem;
+	font-weight: 700;
+	text-align: left; 
+	padding: 0 0 1rem 1rem;
+}
+
+.contact-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-areas: "form" "hours" "map";
+	gap: 1rem;
+	margin: 0 auto;
+}
+.contact-form   { grid-area: form; }
+.contact-hours  { grid-area: hours; }
+.contact-map    { grid-area: map; }
+
+.contact-form, .contact-map {
+	padding-inline: 1rem;
+}
+
+.contact-form h3, .contact-map h3 {
+	font-size: 1.6rem;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+}
+.form-group {
+	margin-bottom: 0.5rem;
+}
+
+.form-group label {
+	display: block;
+	margin-bottom: 0.25rem;
+	font-weight: 600;
+}
+.form-group input, .form-group textarea {
+	width: 100%;
+	padding: 0.5rem;
+	border: 1px solid #222;
+	border-radius: 4px;
+	font-size: 1rem;
+}
+.submit-button {
+	background-color: #222;
+	color: #c78c06;
+	padding: 0.5rem 1rem;
+	font-weight: 500;
+	font-size: 1rem;
+	cursor: pointer;
+	margin-top: 0.5rem;
+}
+.submit-button:hover {
+	background-color: #c78c06;
+	color:#222
+}
+/* =========== HOURS STYLES ============== */
+
+.contact-hours {
+	padding: 1rem;
+}
+.contact-hours h3 {
+	font-size: 1.6rem;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+}
+.contact-hours table {
+	margin: 1rem auto;        
+	border-collapse: collapse;   
+	width: 100%;         
+}
+
+.contact-hours thead th {
+	background-color: #ffe6ac;
+	padding: 0.75rem 1rem;
+	font-weight: 400;                    
+}
+
+.contact-hours th, 
+.contact-hours td {
+	border: 1px solid #222;
+	padding: 0.5rem 1rem; 
+}
+.contact-hours th {
+	text-align: center;
+}
+
+/* ============== MAP STYLES ================ */
+
+.contact-map iframe {
+	width: 100%;       
+	height: 400px;     
+	margin-bottom: 1rem;
+}
+
+/* ========== FOOTER SECTION ========== */
+/* Footer styles including background and link color from brand guide. */
+
+footer {
+	background-color: #222;
+}
+
+.footer-content-wrapper {
+	color: #c78c06;
+	text-decoration: none;
+	line-height: 2rem;
+	font-size: 0.875rem;
+	padding: 1rem;
+}
+footer a {
+	color:#c78c06;
+}
+
+
+/* ===========RESPONSIVE DESKTOP STYLES=========== */
+
+@media screen and (min-width: 760px) {
+
+/* ===========HEADER / NAV GRID STYLES=========== */
+
+.header-row {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 4rem;
+	padding: 0;
+}
+.logo-bar{
+	background-color: transparent; 
+}  
+.nav-links ul {
+	display:flex;
+	flex-direction: row;
+}
+.search-container {
+	width: auto;          
+}
+
+/* ===========HERO BANNER OVERLAY GRID STYLES=========== */
+
+.hero-overlay {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1250px;
+	padding: 1rem 0;
+}
+.hero-h1 {
+	max-width: 650px;
+	padding-top: 1rem;
+}
+
+/* ===========ABOUT US GRID STYLES=========== */
+
+.about-container {
+	flex-direction: row; 
+	gap: 1rem;
+}
+.about-us-image,
+.about-us-content {
+	flex: 1; 
+}
+
+/* ===========SERVICES GRID STYLES=========== */
+
+.services h2 {
+	padding: 2rem 0 0.5rem 0;
+}
+.services-grid {
+	grid-template-columns: repeat(6, 1fr);
+	grid-auto-rows: auto;
+	gap: 1rem;
+	padding: 0;
+}
+.services-grid .service-card:nth-child(1) {
+	grid-column: 1 / span 3; 
+	grid-row: 1;
+}
+.services-grid .service-card:nth-child(2) {
+	grid-column: 4 / span 3; 
+	grid-row: 1;
+}
+.services-grid .service-card:nth-child(3) {
+	grid-column: 1 / span 2; 
+	grid-row: 2;
+}
+.services-grid .service-card:nth-child(4) {
+	grid-column: 3 / span 2;
+	grid-row: 2;
+}
+.services-grid .service-card:nth-child(5) {
+	grid-column: 5 / span 2; 
+	grid-row: 2;
+}
+.service-button {
+	width: 100%;
+	justify-content: center;
+	font-weight: 600;
+}
+
+/* ===========OUR VISION STYLES=========== */
+
+.our-vision {
+	margin-top: 2rem;
+	padding-left: 0;
+}
+
+/* ===========OUR TEAM FLEX STYLES=========== */
+
+.team-member-john,
+.team-member-bob {
+	flex-direction: row;
+	align-items: flex-start; 
+}
+.team-member-bob {
+	flex-direction: row-reverse;
+}
+.team-member-john img {
+	width: 50%; 
+	height: 100%;
+}
+.team-member-bob img {
+	width: 50%; 
+	height: 100%;
+}
+.team-member-john .team-details {
+	padding-left: 0;
+}
+.team-container {
+	gap: 0;
+	padding: 2rem 0;
+}
+.our-team h2 {
+	margin-bottom: 1rem;
+}
+
+/* ===========CONTACT US GRID STYLES=========== */
+
+.contact-form, .contact-map, .contact-hours {
+	padding-inline: 0;
+}
+.contact-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas:
+	"form map"
+	"hours hours";
+}
+.contact-us h2 {
+	padding-left: 0;
+}
+/* FORM CONTACT STYLE */
+.contact-form {
+	grid-area: form;
+}
+/* MAP STYLE */
+.contact-map {
+	grid-area: map;
+}
+/* HOURS STYLE */
+.contact-hours {
+	grid-area: hours;
+}
+.contact-hours {
+	padding: 0;
+}
+.about-us {
+	padding-inline: 0;
+}
+
+/* ===========MASTER CONTAINER 1200px=========== */
+/* Master container: centers and limits content to 1200px with horizontal padding */
+
+.container-1200px {
+	max-width: 1200px;
+	margin: 0 auto; 
+	padding-inline: 1rem; 
+}
+}
